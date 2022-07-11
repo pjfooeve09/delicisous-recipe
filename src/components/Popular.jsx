@@ -21,13 +21,13 @@ class Popular extends Component {
       )
         .then((resp) => resp.json())
         .then((data) => {
-          console.log("hi");
           this.setState({ recipes: data.recipes });
           localStorage.setItem("popular", JSON.stringify(data.recipes));
         });
     }
   }
   render() {
+    console.log(this.state.recipes);
     return (
       <Wrapper>
         <h2>Popular Recipes</h2>

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Home from "./Home";
 import { Route, Routes } from "react-router-dom";
 import Cuisine from "./Cuisine";
-import { withRouter } from "react-router";
 
 class Pages extends Component {
   constructor(props) {
