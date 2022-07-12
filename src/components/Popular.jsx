@@ -27,7 +27,6 @@ class Popular extends Component {
     }
   }
   render() {
-    console.log(this.state.recipes);
     return (
       <Wrapper>
         <h2>Popular Recipes</h2>

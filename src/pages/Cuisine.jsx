@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-//useParams allow us to pull out keyword from URL
-import { Link, useParams } from "react-router-dom";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css/splide.min.css";
+import { useParams } from "react-router-dom";
 
 const withParams = (Component) => {
+  //useParams allow us to pull out keyword from URL. We are using it as a prop
   return (props) => <Component {...props} params={useParams()} />;
 };
 
@@ -18,23 +16,37 @@ class Cuisine extends Component {
     };
   }
 
+  getCuisine(name) {
+    fetch(
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`
+    )
+      .then((resp) => resp.json())
+      .then((data) => {
+        this.setState({ cuisine: data.results });
+      });
+  }
+
+  cuisineType() {
+    const { params } = this.props;
+    return params.type;
+  }
+
   componentDidMount() {
-    const getCuisine = (name) => {
-      fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`
-      )
-        .then((resp) => resp.json())
-        .then((data) => {
-          this.setState({ cuisine: data.results });
-        });
-    };
-    getCuisine(this.props.params.type);
+    this.getCuisine(this.cuisineType());
+  }
+
+  componentDidUpdate(prevProps) {
+    //in order to update setSate in componentDidUpdate, we need to use a conditional statement otherwise it will end up in a loop
+    if (prevProps.params.type !== this.cuisineType()) {
+      this.getCuisine(this.cuisineType());
+    }
   }
 
   render() {
+    const { cuisine } = this.state;
     return (
       <Grid>
-        {this.state.cuisine.map((recipe) => (
+        {cuisine.map((recipe) => (
           <Card key={recipe.id}>
             <img src={recipe.image} alt="" />
             <h4>{recipe.title}</h4>
