@@ -3,11 +3,6 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 
-const withParams = (Component) => {
-  //useParams allow us to pull out keyword from URL. We are using it as a prop
-  return (props) => <Component {...props} params={useParams()} />;
-};
-
 class Cuisine extends Component {
   constructor(props) {
     super(props);
@@ -75,5 +70,10 @@ const Card = styled.div`
     padding: 1rem;
   }
 `;
+
+const withParams = (Component) => {
+  //useParams allow us to pull out keyword from URL. We are using it as a prop
+  return (props) => <Component {...props} params={useParams()} />;
+};
 
 export default withParams(Cuisine);

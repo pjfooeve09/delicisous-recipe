@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Home from "./Home";
-import { Route, Routes } from "react-router-dom";
 import Cuisine from "./Cuisine";
+import Searched from "./Searched";
+import { Route, Routes } from "react-router-dom";
 
 class Pages extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class Pages extends Component {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cuisine/:type" element={<Cuisine />} />
+        <Route path="/searched/:search" element={<Searched />} />
       </Routes>
     );
   }
