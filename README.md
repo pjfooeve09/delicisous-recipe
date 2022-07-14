@@ -7,6 +7,10 @@
 
    ### `REACT_APP_API_KEY=[API Key Goes Here]`
 
+##Delicious Recipe
+
+This App allows users to browse through popular and vegetarian recipes. In addition, they can search for a recipe and open a list of recipes based on the recipe category. Instructions and ingredients will be displayed to the user for each recipe. 
+
 ## Available Scripts
 
 In the project directory, you can run:
