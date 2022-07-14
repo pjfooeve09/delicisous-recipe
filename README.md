@@ -5,7 +5,7 @@ Steps to take before running the project:
 3. In the project main directory, create a new file and name it ".env"
 4. Add the following code below and replace the value with the API Key you copied
 
-   ## REACT_APP_API_KEY=[API Key Goes Here]
+   # REACT_APP_API_KEY=[API Key Goes Here]
 
 ## Available Scripts
 
