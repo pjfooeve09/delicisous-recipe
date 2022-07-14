@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Searched extends Component {
   constructor(props) {
@@ -40,10 +41,12 @@ class Searched extends Component {
     const { searchedRecipes } = this.state;
     return (
       <Grid>
-        {searchedRecipes.map((item) => (
-          <Card key={item.id}>
-            <img src={item.image} alt="" />
-            <h4>{item.title}</h4>
+        {searchedRecipes.map((recipe) => (
+          <Card key={recipe.id}>
+            <NavLink to={"/recipe/" + recipe.id}>
+              <img src={recipe.image} alt="" />
+              <h4>{recipe.title}</h4>
+            </NavLink>
           </Card>
         ))}
       </Grid>

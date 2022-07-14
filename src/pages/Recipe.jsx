@@ -61,12 +61,14 @@ class Recipe extends Component {
               ></h3>
             </div>
           )}
-          <ul>
-            {details.extendedIngredients &&
-              details.extendedIngredients.map((ingredient) => (
-                <li key={ingredient.id}>{ingredient.original}</li>
-              ))}
-          </ul>
+          {activeTab === "ingredients" && (
+            <ul>
+              {details.extendedIngredients &&
+                details.extendedIngredients.map((ingredient) => (
+                  <li key={ingredient.id}>{ingredient.original}</li>
+                ))}
+            </ul>
+          )}
         </Info>
       </DetailWrapper>
     );

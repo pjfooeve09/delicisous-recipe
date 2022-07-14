@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 class Cuisine extends Component {
@@ -42,8 +43,10 @@ class Cuisine extends Component {
       <Grid>
         {cuisine.map((recipe) => (
           <Card key={recipe.id}>
-            <img src={recipe.image} alt="" />
-            <h4>{recipe.title}</h4>
+            <NavLink to={`/recipe/` + recipe.id}>
+              <img src={recipe.image} alt="" />
+              <h4>{recipe.title}</h4>
+            </NavLink>
           </Card>
         ))}
       </Grid>
