@@ -6,10 +6,11 @@
 4. Add the following code below and replace the value with the API Key you copied
 
    ### `REACT_APP_API_KEY=[API Key Goes Here]`
+   
 
-##Delicious Recipe
+## Delicious Recipe
 
-This App allows users to browse through popular and vegetarian recipes. In addition, they can search for a recipe and open a list of recipes based on the recipe category. Instructions and ingredients will be displayed to the user for each recipe. 
+Welcome to Delicious Recipe! this App allows users to browse through popular and vegetarian recipes. In addition, they can search for a recipe and open a list of recipes based on the recipe category. Instructions and ingredients will be displayed to the user for each recipe. 
 
 ## Available Scripts
 
