@@ -11,6 +11,16 @@ class Cuisine extends Component {
     };
   }
 
+  componentDidMount() {
+    this.getCuisine(this.cuisineType());
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.params.type !== this.cuisineType()) {
+      this.getCuisine(this.cuisineType());
+    }
+  }
+
   getCuisine(name) {
     fetch(
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`
@@ -24,17 +34,6 @@ class Cuisine extends Component {
   cuisineType() {
     const { params } = this.props;
     return params.type;
-  }
-
-  componentDidMount() {
-    this.getCuisine(this.cuisineType());
-  }
-
-  componentDidUpdate(prevProps) {
-    //in order to update setSate in componentDidUpdate, we need to use a conditional statement otherwise it will end up in a loop
-    if (prevProps.params.type !== this.cuisineType()) {
-      this.getCuisine(this.cuisineType());
-    }
   }
 
   render() {
@@ -72,7 +71,6 @@ const Card = styled.div`
 `;
 
 const withParams = (Component) => {
-  //useParams allow us to pull out keyword from URL. We are using it as a prop
   return (props) => <Component {...props} params={useParams()} />;
 };
 

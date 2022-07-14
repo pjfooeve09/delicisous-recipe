@@ -14,7 +14,6 @@ class Search extends Component {
     this.props.navigate("/searched/" + this.state.value);
   };
 
-  //handleChange updates the value of setState
   handleChange = (e) => {
     this.setState({ value: e.target.value });
   };
@@ -66,5 +65,3 @@ export const APPWithRouter = (props) => {
   const navigate = useNavigate();
   return <Search navigate={navigate}></Search>;
 };
-
-export default Search;

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { NavLink } from "react-router-dom";
 
 class Veggie extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class Veggie extends Component {
         <h2>Our Vegetarian Picks</h2>
         <Splide
           options={{
-            perPage: 2,
+            perPage: 3,
             pagination: false,
             drag: "free",
             gap: "5rem",
@@ -42,9 +43,11 @@ class Veggie extends Component {
           {this.state.veggies.map((recipe) => (
             <SplideSlide key={recipe.id}>
               <Card>
-                <p>{recipe.title}</p>
-                <img src={recipe.image} alt={recipe.title} />
-                <Gradient />
+                <NavLink to={"/recipe/" + recipe.id}>
+                  <p>{recipe.title}</p>
+                  <img src={recipe.image} alt={recipe.title} />
+                  <Gradient />
+                </NavLink>
               </Card>
             </SplideSlide>
           ))}

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { NavLink } from "react-router-dom";
 
 class Popular extends Component {
   constructor(props) {
@@ -26,13 +27,14 @@ class Popular extends Component {
         });
     }
   }
+
   render() {
     return (
       <Wrapper>
         <h2>Popular Recipes</h2>
         <Splide
           options={{
-            perPage: 2,
+            perPage: 3,
             pagination: false,
             drag: "free",
             gap: "5rem",
@@ -41,9 +43,11 @@ class Popular extends Component {
           {this.state.recipes.map((recipe) => (
             <SplideSlide key={recipe.id}>
               <Card>
-                <p>{recipe.title}</p>
-                <img src={recipe.image} alt={recipe.title} />
-                <Gradient />
+                <NavLink to={"/recipe/" + recipe.id}>
+                  <p>{recipe.title}</p>
+                  <img src={recipe.image} alt={recipe.title} />
+                  <Gradient />
+                </NavLink>
               </Card>
             </SplideSlide>
           ))}
