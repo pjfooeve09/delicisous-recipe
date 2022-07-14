@@ -32,7 +32,6 @@ class Searched extends Component {
   }
 
   searchValue() {
-    console.log(this.props.params.search);
     const { params } = this.props;
     return params.search;
   }
