@@ -59,6 +59,7 @@ class Veggie extends Component {
 
 const Wrapper = styled.div`
   margin: 4rem 4rem;
+  margin-top: -24rem;
 `;
 
 const Card = styled.div`

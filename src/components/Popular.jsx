@@ -13,6 +13,7 @@ class Popular extends Component {
   }
 
   componentDidMount() {
+    document.body.style.backgroundColor = "#FFF8DC";
     const check = localStorage.getItem("popular");
     if (check) {
       this.setState({ recipes: JSON.parse(check) });

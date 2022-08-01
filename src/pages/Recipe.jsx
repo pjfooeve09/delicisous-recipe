@@ -76,7 +76,7 @@ class Recipe extends Component {
 }
 
 const DetailWrapper = styled.div`
-  margin-top: 5rem;
+  margin-top: -23rem;
   margin-bottom: 5rem;
   display: flex;
   .active {
