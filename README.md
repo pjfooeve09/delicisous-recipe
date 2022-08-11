@@ -8,9 +8,17 @@
    ### `REACT_APP_API_KEY=[API Key Goes Here]`
    
 
-## Delicious Recipe
+## Recipe Finder
 
-Welcome to Delicious Recipe! this App allows users to browse through popular and vegetarian recipes. In addition, they can search for a recipe and open a list of recipes based on the recipe category. Instructions and ingredients will be displayed to the user for each recipe. 
+Welcome to Recipe Finder! this App uses an API called spoonacular. It allows users to browse through popular and vegetarian recipes. In addition, they can search for a recipe and open a list of recipes based on the recipe category. Instructions and ingredients will be displayed to the user for each recipe. 
+
+•Used an API called Spoonacular to fetch and display a list of recipes
+
+•Incorporated responsive design patterns, making the app user-friendly
+
+•Ability to select a recipe based on a category; for example, "Thai".
+
+•Implemented a search bar to browse recipes
 
 In the project directory, run:
 
@@ -19,6 +27,10 @@ In the project directory, run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-![](https://www.veed.io/view/5974020d-9068-44cb-9763-e7acb796b945)
+![Screen Shot 2022-08-11 at 10 42 44 AM](https://user-images.githubusercontent.com/68364641/184198751-2824595b-f262-41ff-ba49-210c8306ad65.png)
 
-<a href="http://freegifmaker.me/"><img src="http://i.freegifmaker.me/1/6/6/0/1/8/1660187926355277.gif?1660187943" alt="gifs website"/></a><br/><a href="http://www.freegifmaker.me/">FreeGifMaker.me<a/>
+![Screen Shot 2022-08-11 at 10 41 22 AM](https://user-images.githubusercontent.com/68364641/184198469-9c9f2595-eeaf-48b6-8aaf-e8a6d5cf0a27.png)
+
+![Screen Shot 2022-08-11 at 10 41 52 AM](https://user-images.githubusercontent.com/68364641/184198593-2eb8f52d-8ed6-4995-9ccc-e54870ee1350.png)
+
+![Screen Shot 2022-08-11 at 10 43 01 AM](https://user-images.githubusercontent.com/68364641/184198817-6aaa8140-590a-4f59-85e4-952be136d689.png)
