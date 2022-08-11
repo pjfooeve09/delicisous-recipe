@@ -19,3 +19,4 @@ In the project directory, run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+![](https://www.veed.io/view/5974020d-9068-44cb-9763-e7acb796b945)
