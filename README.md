@@ -27,9 +27,9 @@ In the project directory, run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-![Screen Shot 2022-08-11 at 10 42 44 AM](https://user-images.githubusercontent.com/68364641/184198751-2824595b-f262-41ff-ba49-210c8306ad65.png)
-
 ![Screen Shot 2022-08-11 at 10 41 22 AM](https://user-images.githubusercontent.com/68364641/184198469-9c9f2595-eeaf-48b6-8aaf-e8a6d5cf0a27.png)
+
+![Screen Shot 2022-08-11 at 10 42 44 AM](https://user-images.githubusercontent.com/68364641/184198751-2824595b-f262-41ff-ba49-210c8306ad65.png)
 
 ![Screen Shot 2022-08-11 at 10 41 52 AM](https://user-images.githubusercontent.com/68364641/184198593-2eb8f52d-8ed6-4995-9ccc-e54870ee1350.png)
 
